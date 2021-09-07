@@ -1,0 +1,188 @@
+/*  ------------------- ESTILOS GERAIS  ------------------- */
+html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*  ------------------- Cores padrão  ------------------- */
+:root{
+    --colorBackgroundPrimary: #e96000;
+    --colorBackgroundSecondary: #fff;
+    --colorBackgroundThird: #c0392b;
+    --colorBackgroundFourth: #f39c12;
+    --colorTextPrimary:#000;
+    --colorTextSecudary:#636363;
+
+}
+
+
+/* -------------------  BODY  -------------------  */
+body{
+    background-color: var(--colorBackgroundSecondary);
+}
+
+/* HEADER */
+header{
+    background-color: var(--colorBackgroundPrimary);
+    color: var(--colorBackgroundSecondary);
+    padding-top: 10px;
+    width: 100%;
+    height:auto;
+}
+
+header h2 div{
+    color: var(--colorBackgroundPrimary);
+}
+
+
+header a {
+    color: var(--colorBackgroundSecondary);
+}
+
+header nav ul li a{
+    color:var(--colorBackgroundSecondary);
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+/* -------------------  FOOTER -------------------  */
+footer{
+    background-color:var(--colorBackgroundPrimary);
+    color:var(--colorBackgroundSecondary);
+    padding-top: 10px;
+    width: 100%;
+    height:auto;
+    
+}
+
+footer nav ul li a{
+    color:var(--colorBackgroundSecondary);
+    list-style: none;
+    text-decoration: none;
+}
+
+
+object {
+    overflow: hidden;
+    width: 100%;
+    height:100%;
+}
+
+
+/* ------------------- Estilo login  ------------------- */
+.user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: var(--colorBackgroundFourth);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+}
+.brand_logo_container {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: -75px;
+    right:100px;
+    border-radius: 60%;
+    background:var(--colorBackgroundPrimary);
+    padding: 20px;
+    text-align: center;
+}
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--colorBackgroundSecondary);
+}
+.form_container {
+    margin-top: 100px;
+}
+.login_btn {
+    width: 100%;
+    background: var(--colorBackgroundThird) !important;
+    color: var(--colorBackgroundSecondary) !important;
+}
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.login_container {
+    padding: 0 2rem;
+}
+.input-group-text {
+    background: var(--colorBackgroundThird) !important;
+    color: var(--colorBackgroundSecondary) !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: var(--colorBackgroundThird) !important;
+}
+
+
+/* -------------------  Texto em cima imagem hospedagem ------------------- */
+.dados {
+    bottom: 10px;
+    right: 10px;
+}
+
+.text {
+    font-family: "Arial Bold", Arial;
+    font-weight: 700;
+    font-size: 22px;
+    color: #ffffff !important;
+}
+
+.pointer{
+    cursor: pointer;
+    color: #fff !important;
+    text-decoration: underline !important;
+}
+
+.pointer:hover{
+    color: rgb(37, 45, 158) !important;    
+}
+
+.espacamento{
+    justify-content: space-between;
+}
+
+.btnG{
+    width: 40%;
+}
+
+.m-top{
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.m-center{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
