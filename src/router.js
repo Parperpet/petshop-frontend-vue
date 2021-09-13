@@ -33,6 +33,8 @@ import PasseiosContratados from '@/components/PasseiosContratados.vue';
 import ComentariosAdm from '@/components/ComentariosAdm.vue';
 import GerenciarComentarios from '@/components/GerenciarComentarios.vue';
 import PaginaInicial from '@/components/PaginaInicial.vue';
+import PerfilsCompativeisComPet from '@/components/PerfilsCompativeisComPet.vue';
+import MensagemParaPerfilCompativelComPet from '@/components/MensagemParaPerfilCompativelComPet.vue';
 
 Vue.use(VueRouter);
 
@@ -74,5 +76,7 @@ export default new VueRouter({
     { path: '/comentariosAdm/:idUsuario', component: ComentariosAdm },
     { path: '/gerenciarComentarios/:idUsuario', component: GerenciarComentarios },
     { path: '/paginaInicial/:idUsuario', component: PaginaInicial },
+    { path: '/perfilsCompativeisComPet/:idUsuario/:idPet', component: PerfilsCompativeisComPet },
+    { path: '/mensagemParaPerfilCompativelComPet/:idUsuario/:idPerfilCompativel/:idPet', component: MensagemParaPerfilCompativelComPet },
   ]
 });
