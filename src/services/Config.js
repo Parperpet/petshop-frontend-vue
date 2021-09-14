@@ -2,10 +2,10 @@ import axios from 'axios';
 
 export const api = axios.create({
   //Produção
-  baseURL: 'https://petshop-backend-springboot.herokuapp.com/', 
+  // baseURL: 'https://petshop-backend-springboot.herokuapp.com/', 
 
   //Desenvolvimento
-  // baseURL: 'http://localhost:8010', 
+  baseURL: 'http://localhost:8010', 
   withCredentials: false,
   headers: {
     "Access-Control-Allow-Origin": "*",

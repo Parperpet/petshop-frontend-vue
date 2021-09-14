@@ -11,4 +11,8 @@ export default{
     return api.post(endPoint + "gravarPreferenciaPet", preferenciaPet);
   },
 
+  retornaUsuariosCompativeisComPet: (pet) => {
+    return api.post(endPoint + "retornaUsuariosCompativeisComPet", pet);
+  },
+
 }
