@@ -19,6 +19,7 @@
               <ul class="ml-4">
                 <li><h2>{{reservaPasseio.pet.nome}}</h2></li>
                 <li>Especie: {{reservaPasseio.pet.especie}}</li>
+                <li>Sexo: {{reservaPasseio.pet.sexo}}</li>
                 <li>Idade: {{reservaPasseio.pet.idade}}</li>
                 <li>Cor: {{reservaPasseio.pet.cor}} </li>
                 <li>Porte: {{reservaPasseio.pet.porte}}</li> 

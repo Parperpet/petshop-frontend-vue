@@ -12,6 +12,7 @@
             <ul class="mt-3 ml-4">
               <li><h3>{{pet.nome}}</h3></li>
               <li>Especie: {{pet.especie}}</li>
+              <li>Sexo: {{pet.sexo}}</li>
               <li>Idade: {{pet.idade}}</li>
               <button type="button" class="btn btn-warning mt-2" @click="maisInformacoes(pet.idPet)">Mais informções</button>
             </ul>

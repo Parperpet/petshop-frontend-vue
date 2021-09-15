@@ -11,6 +11,7 @@
             <ul>
               <li><h1>{{pet.nome}}</h1></li>
               <li>Especie: {{pet.especie}}</li>
+              <li>Sexo: {{pet.sexo}}</li>
               <li>Idade: {{pet.idade}}</li>
               <li>Cor: {{pet.cor}} </li>
               <li>Porte: {{pet.porte}}</li> 
@@ -90,7 +91,8 @@ export default {
         necessitaCompanhia: "",
         descricao: "",
         fotoPerfilBase64: "",
-        disponivelParaAdocao: ""
+        disponivelParaAdocao: "",
+        sexo: ""
       },
       donoAntigo:{
         idUsuario: "",
