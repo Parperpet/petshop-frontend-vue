@@ -64,6 +64,13 @@
               <option>Até R$300</option>      
             </select>
           </div>
+          <div class="form-group col-sm-4">
+            <label>Sexo</label>
+            <select class="form-control" v-model="preferenciaPet.sexo">
+              <option>Macho</option>
+              <option>Fêmea</option>
+            </select>
+          </div>
         </div>               
       </form>
     </div>
@@ -114,6 +121,7 @@ export default {
         custoMensal: "",
         necessitaPasseio: "",
         necessitaCompanhia: "",
+        sexo: ""
       }
     }
   },

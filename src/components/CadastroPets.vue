@@ -4,19 +4,14 @@
     <MenuProfissional :nomeProfissional="usuario.nome" v-if="usuario.nivelAcesso == 'Profissional'"/>
     <center> 
       <div class="container">
-        <h1 class="mt-3">Editar Pet</h1><br>
+        <h1 class="mt-3">Cadastro Pet para adoção</h1><br>
         <div class="row">
-          <div class="center">
-            <img v-if="pet.fotoPerfilBase64 != 0" :src="pet.fotoPerfilBase64"  class="img-thumbnail" />            
-            <img v-else src="@/assets/sem-foto.jpg"  class="img-thumbnail" />
-          </div>
-            <form class="w-100 mt-3">
+            <form class="w-100">
               <div class="row">
                 <div class="form-group col-sm-4">
-                  <label for="exampleFormControlInput1">Nome Animal</label>
+                  <label >Nome Animal</label>
                   <input type="text" class="form-control" placeholder="Pluto" v-model="pet.nome">
                 </div>
-
                 <div class="form-group col-sm-4">
                   <label>Idade</label>
                   <select class="form-control" v-model="pet.idade">
@@ -26,8 +21,7 @@
                     <option>até 5 anos</option>
                     <option>Mais de 5 anos</option>
                   </select>
-                </div>                                 
-                          
+                </div>    
                 <div class="form-group col-sm-4">
                   <label>Especie</label>
                   <select class="form-control" v-model="pet.especie">
@@ -116,10 +110,10 @@
                   <label class="form-check-label">Necessita Companhia</label>
                 </div>                 
               </div>   
-            </form>       
+            </form>        
         </div>
         <br>
-        <button class="btn btn-warning" type="submit" @click="editar">Editar Pet</button>
+        <button class="btn btn-warning" type="submit" @click="cadastrar">Cadastrar Pet</button>
       </div>
     </center>
     <br><br>
@@ -133,14 +127,16 @@ import MenuCliente from "@/components/MenuCliente"
 import MenuProfissional from "@/components/MenuProfissional"
 import Footer from '@/components/Footer'
 import ApiPet from '@/services/ApiPet.js'
+import ApiUsuario from '@/services/ApiUsuario.js';
 
-export default {
-  name: "EditarPet",
+export default {  
+  name: "CadastroPets",
   components:{
     MenuCliente,
     MenuProfissional,
     Footer
   },
+
   data(){
     return{
       usuario:{
@@ -179,39 +175,38 @@ export default {
   },
 
   mounted(){
-    ApiPet.retornaPorId(this.$route.params.idPet)
+    ApiUsuario.retornaPorId(this.$route.params.idUsuario)
     .then(resp => {          
-      this.pet = resp.data;                       
-      this.usuario = resp.data.dono
+      this.usuario = resp.data;                       
     })
     .catch(e => alert(e.response.data.mensagem))
   },
 
   methods:{
-    editar(){    
-      
+    cadastrar(){
+      this.pet.dono.idUsuario = this.usuario.idUsuario; 
+
       if (this.$refs.files.files.length != 0){
         var reader = new FileReader()
-        reader.readAsDataURL(this.$refs.files.files[0])      
+        reader.readAsDataURL(this.$refs.files.files[0])
         reader.onload = () => {
           this.pet.fotoPerfilBase64 = reader.result
 
           ApiPet.gravarPet(this.pet)
           .then(() =>{
-            alert("Pet modificado com sucesso")
+            alert("Pet cadastrado com sucesso")
           })
           .catch(e => alert(e.response.data.mensagem))
-        }
+        }       
 
       } else {
         ApiPet.gravarPet(this.pet)
         .then(() =>{
-          alert("Pet modificado com sucesso")
+          alert("Pet cadastrado com sucesso")
         })
         .catch(e => alert(e.response.data.mensagem))
       }
 
-        
     }
   }
 }
